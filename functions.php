@@ -105,3 +105,11 @@ function gurim_context($context) {
     return $context;
 }
 
+/**
+ * Enqueue styles and scripts.
+ */
+function gurim_styles_and_scripts() {
+    wp_enqueue_style('gurim', get_stylesheet_uri());
+}
+
+add_action('wp_enqueue_scripts', 'gurim_styles_and_scripts');
