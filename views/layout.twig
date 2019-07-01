@@ -12,10 +12,19 @@
     </head>
     <body>
         <div class="main-container">
-            {{ fn('wp_nav_menu') }}
+        <nav>
+            <ul class="primary-menu">
+                {% for item in primary_menu.items %}
+                    <li class="nav-main-item {{ item.classes|join(' ') }}">
+                        <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
 {% endblock %}
 
 {% block container %}
+
 <div class="content">
     {% block content %}
 
