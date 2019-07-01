@@ -11,14 +11,27 @@ if(!class_exists('Timber')) {
 }
 
 /**
+ * Enable "Featured image" support.
+ */
+add_theme_support('post-thumbnails');
+
+/**
  * Register custom post type.
  */
-
-
 if(!post_type_exists('product')) {
     add_action('init', function() {
         register_post_type('product', [
             'show_ui' => true,
+            'supports' => [
+                'title',
+                'editor',
+                'thumbnail'
+            ],
+            'menu_position' => 2,
+            'taxonomies' => [
+                'category',
+                'post_tag'
+            ],
             'labels' => [
                 'name' => __('Products'),
                 'singular' => __('Product'),
