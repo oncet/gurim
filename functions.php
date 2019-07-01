@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Check if the Timber plugin is loaded.
+ * Show an error message if the Timber plugin is not installed.
  */
 if(!class_exists('Timber')) {
     add_action('admin_notices', function() {
