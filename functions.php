@@ -81,3 +81,27 @@ function gurim_attachments($attachments) {
 
 add_action('attachments_register', 'gurim_attachments');
 
+/**
+ * Register navigation menus.
+ */
+function gurim_menus() {
+    register_nav_menus([
+       'primary-menu' => __('Primary menu')
+    ]);
+    register_nav_menus([
+       'secondary-menu' => __('Secondary menu')
+    ]);
+}
+
+add_action('init', 'gurim_menus');
+
+/**
+ * Add the primary menu to the global context.
+ */
+add_filter('timber/context', 'gurim_context');
+
+function gurim_context($context) {
+    $context['primary_menu'] = new \Timber\Menu('primary-menu');
+    return $context;
+}
+
