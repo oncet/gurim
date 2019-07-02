@@ -12,15 +12,7 @@
     </head>
     <body>
         <div class="main-container">
-        <nav>
-            <ul class="primary-menu">
-                {% for item in primary_menu.items %}
-                    <li class="nav-main-item {{ item.classes|join(' ') }}">
-                        <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
+        {% include 'partials/menu.twig' with { menu: primary_menu, class: 'primary-menu'} %}
 {% endblock %}
 
 {% block container %}
