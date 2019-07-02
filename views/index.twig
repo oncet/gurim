@@ -11,6 +11,6 @@
         </ul>
     </nav>
     {% for product in products %}
-        {{ product.content }}
+        <a href="{{ product.link }}"><img src="{{ product.thumbnail.src('large') }}" alt="{{ product.title }}" /></a>
     {% endfor %}
 {% endblock %}
