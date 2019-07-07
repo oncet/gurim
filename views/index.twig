@@ -1,7 +1,10 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-    {% include 'partials/menu.twig' with { menu: secondary_menu, class: 'secondary-menu' } %}
+    {% include 'partials/menu.twig' with {
+        name: 'secondary-menu',
+        menu: secondary_menu
+    } %}
     {% for product in products %}
         <a href="{{ product.link }}"><img src="{{ product.thumbnail.src('large') }}" alt="{{ product.title }}" /></a>
     {% endfor %}

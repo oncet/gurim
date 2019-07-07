@@ -12,7 +12,11 @@
     </head>
     <body>
         <div class="main-container">
-        {% include 'partials/menu.twig' with { menu: primary_menu, class: 'primary-menu'} %}
+            {% include 'partials/menu.twig' with {
+                name: 'primary-menu',
+                menu: primary_menu,
+                collapse: true
+            } %}
 {% endblock %}
 
 {% block container %}
