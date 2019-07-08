@@ -96,11 +96,12 @@ function gurim_menus() {
 add_action('init', 'gurim_menus');
 
 /**
- * Add the primary menu to the global context.
+ * Add global timber variables.
  */
 add_filter('timber/context', 'gurim_context');
 
 function gurim_context($context) {
+    $context['blog_name'] = get_bloginfo('name');
     $context['primary_menu'] = new \Timber\Menu('primary-menu');
     return $context;
 }
