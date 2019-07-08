@@ -1,4 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {% if brand %}
+        <a class="navbar-brand" href="#">{{ blog_name }}</a>
+    {% endif %}
     {% if collapse %}
         <button
             class="navbar-toggler"
