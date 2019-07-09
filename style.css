@@ -8,6 +8,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gurim
 */
 
-img {
+nav .navbar-brand img {
+    max-width: 90px;
+}
+
+.products img {
     max-width: 100%;
 }
