@@ -14,6 +14,7 @@ if(!class_exists('Timber')) {
  * Enable "Featured image" support.
  */
 add_theme_support('post-thumbnails');
+add_theme_support('custom-logo');
 
 /**
  * Register custom post type.
@@ -102,6 +103,7 @@ add_filter('timber/context', 'gurim_context');
 
 function gurim_context($context) {
     $context['blog_name'] = get_bloginfo('name');
+    $context['blog_logo'] = wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full');
     $context['primary_menu'] = new \Timber\Menu('primary-menu');
     return $context;
 }
