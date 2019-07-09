@@ -1,11 +1,27 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-    {% include 'partials/secondary-menu.twig' with {
-        name: 'secondary-menu',
-        menu: secondary_menu
-    } %}
-    {% for product in products %}
-        <a href="{{ product.link }}"><img src="{{ product.thumbnail.src('large') }}" alt="{{ product.title }}" /></a>
-    {% endfor %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                {% include 'partials/secondary-menu.twig' with {
+                    name: 'secondary-menu',
+                    menu: secondary_menu
+                } %}
+            </div>
+            <div class="col">
+                {% if products %}
+                    <div class="row products">
+                        {% for product in products %}
+                            <div class="col-md-6 mb-4">
+                                <a href="{{ product.link }}">
+                                    <img src="{{ product.thumbnail.src('large') }}" alt="{{ product.title }}" />
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
