@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Enable theme features.
+ */
+add_theme_support('post-thumbnails');
+add_theme_support('custom-logo');
+
+/**
  * Show an error message if the Timber plugin is not installed.
  */
 if(!class_exists('Timber')) {
@@ -11,17 +17,11 @@ if(!class_exists('Timber')) {
 }
 
 /**
- * Enable "Featured image" support.
- */
-add_theme_support('post-thumbnails');
-add_theme_support('custom-logo');
-
-/**
  * Register custom post type.
  */
-if(!post_type_exists('product')) {
+if(!post_type_exists('gurim_product')) {
     add_action('init', function() {
-        register_post_type('product', [
+        register_post_type('gurim_product', [
             'show_ui' => true,
             'supports' => [
                 'title',
@@ -79,7 +79,6 @@ function gurim_attachments($attachments) {
     'fields' => []
   ]);
 }
-
 add_action('attachments_register', 'gurim_attachments');
 
 /**
@@ -93,14 +92,11 @@ function gurim_menus() {
        'secondary-menu' => __('Secondary menu')
     ]);
 }
-
 add_action('init', 'gurim_menus');
 
 /**
  * Add global timber variables.
  */
-add_filter('timber/context', 'gurim_context');
-
 function gurim_context($context) {
     $context['blog_name'] = get_bloginfo('name');
     $context['blog_logo'] = wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full');
@@ -110,6 +106,7 @@ function gurim_context($context) {
     $context['primary_menu'] = new \Timber\Menu('primary-menu');
     return $context;
 }
+add_filter('timber/context', 'gurim_context');
 
 /**
  * Enqueue styles and scripts.
@@ -120,7 +117,6 @@ function gurim_styles_and_scripts() {
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js');
 }
-
 add_action('wp_enqueue_scripts', 'gurim_styles_and_scripts');
 
 /**
@@ -150,6 +146,5 @@ function gurim_customize_register($wp_customize) {
             'section'   => 'colors'
         ]
     ));
- }
-
+}
 add_action('customize_register', 'gurim_customize_register');
