@@ -1,0 +1,14 @@
+{% extends 'layout.twig' %}
+{% block content %}
+    <div class="container products">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-6 mb-4">
+                    <a href="{{ product.link }}">
+                        <img src="{{ product.thumbnail.src('large') }}" alt="{{ product.title }}" />
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
