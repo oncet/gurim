@@ -10,6 +10,7 @@ function gurim_context($context) {
     $context['secondary_menu_link_color'] = get_theme_mod('gurim_secondary_menu_link_color');
     $context['site'] = new \Timber\Site();
     $context['primary_menu'] = new \Timber\Menu('primary-menu');
+    $context['secondary_menu'] = new \Timber\Menu('secondary-menu');
     return $context;
 }
 add_filter('timber/context', 'gurim_context');
