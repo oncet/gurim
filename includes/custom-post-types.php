@@ -3,10 +3,12 @@
 /**
  * Register custom post type.
  */
-if(!post_type_exists('gurim_product')) {
+if(!post_type_exists('product')) {
     add_action('init', function() {
-        register_post_type('gurim_product', [
+        register_post_type('product', [
             'show_ui' => true,
+            'public' => true,
+            'show_in_rest' => true,
             'supports' => [
                 'title',
                 'editor',
