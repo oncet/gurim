@@ -13,17 +13,29 @@
 {% endblock %}
 
 {% block container %}
+<div class="container">
+    {% include 'partials/primary-menu.twig' with {
+        name: 'primary-menu',
+        menu: primary_menu,
+        collapse: true,
+        brand: true
+    } %}
     <div class="container">
-        {% include 'partials/primary-menu.twig' with {
-            name: 'primary-menu',
-            menu: primary_menu,
-            collapse: true,
-            brand: true
-        } %}
-        {% block content %}
+        <div class="row">
+            <div class="col-md-3">
+                {% include 'partials/secondary-menu.twig' with {
+                    name: 'secondary-menu',
+                    menu: secondary_menu
+                } %}
+            </div>
+                <div class="col-md-9">
+                    {% block content %}
 
-        {% endblock %}
+                    {% endblock %}
+            </div>
+        </div>
     </div>
+</div>
 {% endblock %}
 
 {% block footer %}

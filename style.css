@@ -12,6 +12,11 @@ nav .navbar-brand img {
     max-width: 90px;
 }
 
-.products img {
+.products img,
+.product img {
     max-width: 100%;
+}
+
+.product .content img {
+    width: 100%;
 }
