@@ -12,4 +12,7 @@ $context['products'] = new Timber\PostQuery([
         ]
     ]
 ]);
+
+$context['category'] = get_cat_name(get_query_var('cat'));
+
 Timber::render(['category.twig'], $context);

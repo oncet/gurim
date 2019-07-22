@@ -1,6 +1,7 @@
 {% extends 'layout.twig' %}
 {% block content %}
     <div class="container products">
+        <h1 class="font-weight-light text-center text-md-left">{{ category }}</h1>
         <div class="row">
             {% for product in products %}
                 <div class="col-md-6 mb-4">
