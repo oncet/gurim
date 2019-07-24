@@ -11,8 +11,7 @@ Text Domain: gurim
 nav .navbar-brand img {
     max-width: 90px;
 }
-.navbar-nav .active,
-.navbar-nav .current-menu-parent {
+.navbar-nav .active {
     font-weight: 500;
 }
 
