@@ -6,7 +6,7 @@
             {% for product in products %}
                 <div class="col-md-6 mb-4">
                     <a href="{{ product.link }}">
-                        <img src="{{ product.thumbnail.src('large') }}" alt="{{ product.title }}" />
+                        <img src="{{ product.thumbnail.src('thumbnail') }}" alt="{{ product.title }}" />
                     </a>
                 </div>
             {% endfor %}
