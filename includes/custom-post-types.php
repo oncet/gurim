@@ -8,6 +8,7 @@ if(!post_type_exists('product')) {
         register_post_type('product', [
             'show_ui' => true,
             'public' => true,
+            'has_archive' => true,
             'show_in_rest' => true,
             'supports' => [
                 'title',
