@@ -15,9 +15,12 @@ nav .navbar-brand img {
     font-weight: 500;
 }
 
-.products img,
-.product img {
+.products img {
     max-width: 100%;
+}
+
+.product img {
+    width: 100%;
 }
 
 .product .content img {
