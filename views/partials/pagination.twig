@@ -1,0 +1,15 @@
+<nav>
+    <ul class="pagination justify-content-center justify-content-md-end">
+        <li class="page-item {{paginable.pagination.prev? null : 'disabled'}}">
+            <a href="{{paginable.pagination.prev.link}}" class="bg-transparent border-0 page-link">&laquo;</a>
+        </li>
+        {% for page in paginable.pagination.pages %}
+            <li class="page-item {{page.link? null : 'disabled'}}">
+                <a href="{{page.link}}" class="bg-transparent border-0 page-link {{page.class}}">{{page.title}}</a>
+            </li>
+        {% endfor %}
+        <li class="page-item {{paginable.pagination.next? null : 'disabled'}}">
+            <a href="{{paginable.pagination.next.link}}" class="bg-transparent border-0 page-link">&raquo;</a>
+        </li>
+    </ul>
+</nav>
