@@ -14,6 +14,10 @@ function add_current_nav_class($classes, $item) {
     // Getting the current post details
     global $post;
 
+    if (!$post) {
+        return $classes;
+    }
+
     // Getting the post type of the current post
     $current_post_type = get_post_type_object(get_post_type($post->ID));
     $current_post_type_slug = $current_post_type->rewrite['slug'];
