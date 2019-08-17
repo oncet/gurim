@@ -1,14 +1,29 @@
 {% extends 'layout.twig' %}
+
+{% block menu %}
+    {% include 'partials/secondary-menu.twig' with {
+        name: 'products-menu',
+        menu: products_menu
+    } %}
+{% endblock %}
+
 {% block content %}
     <div class="container products">
         <div class="row">
             {% for product in products %}
-                <div class="col-md-6 mb-4">
+                <div class="col-md-4 mb-4">
                     <a href="{{ product.link }}">
                         <img src="{{ product.thumbnail.src('thumbnail') }}" alt="{{ product.title }}" />
+                        <br />
+                        <div>
+                            {{ product.title }}
+                        </div>
                     </a>
                 </div>
             {% endfor %}
         </div>
     </div>
+    {% include 'partials/pagination.twig' with {
+        paginable: products
+    } %}
 {% endblock %}
