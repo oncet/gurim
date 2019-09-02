@@ -8,9 +8,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gurim
 */
 
+.main-container a {
+    color: #005f6b !important;
+}
+
 nav .navbar-brand img {
     max-width: 90px;
 }
+
 .navbar-nav .active {
     font-weight: 500;
 }
@@ -31,4 +36,8 @@ nav .navbar-brand img {
 .products a:hover {
     color: black;
     text-decoration: none;
+}
+
+.content li {
+    list-style-type: square;
 }
