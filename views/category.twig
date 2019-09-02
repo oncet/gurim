@@ -1,12 +1,5 @@
 {% extends 'layout.twig' %}
 
-{% block menu %}
-    {% include 'partials/secondary-menu.twig' with {
-        name: 'products-menu',
-        menu: products_menu
-    } %}
-{% endblock %}
-
 {% block content %}
     <div class="container products">
         <div class="row">

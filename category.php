@@ -20,9 +20,4 @@ $context['products'] = new Timber\PostQuery([
     ]
 ]);
 
-$menus = get_nav_menu_locations();
-$menu = wp_get_nav_menu_object($menus['products-menu']);
-
-$context['products_menu'] = $menu ? new \Timber\Menu($menu->slug) : false;
-
 Timber::render(['category.twig'], $context);
