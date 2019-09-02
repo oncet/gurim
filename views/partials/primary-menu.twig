@@ -19,12 +19,8 @@
     </button>
 
     <div class="collapse navbar-collapse" id="{{ name }}">
-        <ul class="navbar-nav ml-auto">
-            {% for item in menu.items %}
-                <li class="nav-item ml-auto {{ item.classes|join(' ') }} {{ item.current ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+        {% include 'partials/primary-menu-list.twig' with {
+            items: menu.items
+        } %}
     </div>
 </nav>
