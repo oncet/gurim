@@ -38,6 +38,10 @@ nav .navbar-brand img {
     text-decoration: none;
 }
 
+.products a:hover div {
+    background-color: #0000000f;
+}
+
 .content li {
     list-style-type: square;
 }
