@@ -11,7 +11,14 @@
             </ul>
         {% endif %}
         <div class="image">
-            <a href="{{ post.thumbnail.src('large') }}" class="simplelightbox"><img src="{{ post.thumbnail.src('large') }}" alt="{{ post.title }}" /></a>
+            <a href="{{ post.thumbnail.src('large') }}" class="simplelightbox">
+                <img
+                    src="{{ post.thumbnail.src('large') }}"
+                    srcset="{{ post.thumbnail.srcset('large') }}"
+                    sizes="{{ post.thumbnail.img_sizes('large') }}"
+                    alt="{{ post.title }}"
+                >
+            </a>
         </div>
         <br />
         <div class="content">

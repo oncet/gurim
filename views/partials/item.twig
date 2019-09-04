@@ -1,6 +1,12 @@
 <a href="{{ post.link }}" class="col-md-4 mb-4">
     <div class="card bg-transparent border-0">
-    <img src="{{ post.thumbnail.src('thumbnail') }}" class="card-img-top" alt="{{ post.title }}">
+    <img
+        src="{{ post.thumbnail.src('thumbnail') }}"
+        srcset="{{ post.thumbnail.srcset('thumbnail') }}"
+        sizes="{{ post.thumbnail.img_sizes('thumbnail') }}"
+        alt="{{ post.title }}"
+        class="card-img-top"
+    >
     <div class="card-body p-2">
         <p class="m-0">{{ post.title }}</p>
     </div>
