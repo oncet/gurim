@@ -1,14 +1,27 @@
-<nav class="navbar navbar-expand-sm p-0 mt-md-3 navbar-light">
-    <ul class="navbar-nav text-center text-md-left mx-auto mx-md-0 flex-column">
-        {% for item in menu.items %}
-            <li class="nav-item {{ item.classes|join(' ') }} {{ item.current ? 'active' : '' }}">
-                <a
-                    href="{{ item.link }}"
-                    class="nav-link"
-                >
-                    {{ item.title }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+<nav class="navbar navbar-expand-md p-0 mt-md-3 navbar-light">
+    <button
+        class="navbar-toggler ml-auto mr-auto mb-3 mt-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#{{ name }}"
+        aria-controls="{{ name }}"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <i class="fas fa-filter"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="{{ name }}">
+        <ul class="navbar-nav text-center text-md-left mx-auto mx-md-0 flex-column">
+            {% for item in menu.items %}
+                <li class="nav-item {{ item.classes|join(' ') }} {{ item.current ? 'active' : '' }}">
+                    <a
+                        href="{{ item.link }}"
+                        class="nav-link"
+                    >
+                        {{ item.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </nav>
