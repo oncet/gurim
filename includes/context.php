@@ -13,8 +13,10 @@ function gurim_context($context) {
     $menus = get_nav_menu_locations();
     $primary_menu = wp_get_nav_menu_object($menus['primary-menu']);
     $secondary_menu = wp_get_nav_menu_object($menus['secondary-menu']);
+    $footer_menu = wp_get_nav_menu_object($menus['footer-menu']);
     $context['primary_menu'] = $primary_menu ? new \Timber\Menu($primary_menu->slug) : false;
     $context['secondary_menu'] = $secondary_menu ? new \Timber\Menu($secondary_menu->slug) : false;
+    $context['footer_menu'] = $footer_menu ? new \Timber\Menu($footer_menu->slug) : false;
 
     return $context;
 }
