@@ -10,7 +10,7 @@
                 {% endfor %}
             </ul>
         {% endif %}
-        <div class="image">
+        <div class="image mb-3">
             <a href="{{ post.thumbnail.src('large') }}" class="simplelightbox">
                 <img
                     src="{{ post.thumbnail.src('large') }}"
@@ -20,7 +20,6 @@
                 >
             </a>
         </div>
-        <br />
         <div class="content">
             {{ post.content }}
         </div>
