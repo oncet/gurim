@@ -50,3 +50,7 @@ nav .navbar-brand img {
 .content li {
     list-style-type: square;
 }
+
+.ie-fix {
+    min-height: 1px;
+}
