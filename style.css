@@ -44,7 +44,7 @@ nav .navbar-brand img {
 }
 
 .products a:hover div {
-    background-color: #0000000f;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .content li {
