@@ -8,13 +8,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gurim
 */
 
-.content a,
-.pagination a {
+.content a {
     color: #005f6b !important;
 }
 
-.navbar-light a {
+.navbar-light a,
+.pagination a {
     color: black !important;
+}
+
+.pagination .disabled a {
+    color: rgba(0, 0, 0, 0.45) !important;
 }
 
 nav .navbar-brand img {
