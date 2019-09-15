@@ -13,7 +13,8 @@ if(!post_type_exists('product')) {
             'supports' => [
                 'title',
                 'editor',
-                'thumbnail'
+                'thumbnail',
+                'revisions'
             ],
             'menu_position' => 2,
             'taxonomies' => [
