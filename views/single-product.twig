@@ -2,7 +2,9 @@
 
 {% block content %}
     <div class="product">
-        <h1 class="font-weight-light text-center text-md-left">{{ post.title }}</h1>
+        {% include 'partials/h1.twig' with {
+            title: post.title
+        } %}
         {% if post.categories %}
             <ul class="list-inline">
                 {% for category in post.categories %}

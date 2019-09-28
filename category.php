@@ -2,7 +2,10 @@
 
 $context = Timber::context();
 
+$context['category'] = get_cat_name(get_query_var('cat'));
+
 global $paged;
+
 if (!isset($paged) || !$paged){
     $paged = 1;
 }
