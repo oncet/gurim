@@ -58,3 +58,10 @@ nav .navbar-brand img {
 .ie-fix {
     min-height: 1px;
 }
+
+@media only screen and (max-width: 576px) {
+	.blocks-gallery-item {
+          width: 100% !important;
+          margin-right: 0 !important;
+	}
+}
