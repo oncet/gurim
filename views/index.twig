@@ -4,11 +4,9 @@
     <div class="products">
         <div class="row">
             {% for product in products %}
-                <div class="col-md-6 mb-4">
-                    <a href="{{ product.link }}">
-                        <img src="{{ product.thumbnail.src('medium') }}" alt="{{ product.title }}" />
-                    </a>
-                </div>
+                {% include 'partials/item.twig' with {
+                    post: product
+                } %}
             {% endfor %}
         </div>
     </div>
