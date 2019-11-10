@@ -14,7 +14,8 @@ if(!post_type_exists('product')) {
                 'title',
                 'editor',
                 'thumbnail',
-                'revisions'
+                'revisions',
+                'custom-fields'
             ],
             'menu_position' => 2,
             'taxonomies' => [
