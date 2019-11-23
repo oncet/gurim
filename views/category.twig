@@ -3,8 +3,9 @@
 {% block content %}
     <div class="products">
         {% include 'partials/h1.twig' with {
-            title: category
+            title: category.name
         } %}
+        {{ category.description }}
         <div class="row">
             {% for product in products %}
                 {% include 'partials/item.twig' with {

@@ -2,7 +2,8 @@
 
 $context = Timber::context();
 
-$context['category'] = get_cat_name(get_query_var('cat'));
+$context['category']['name'] = get_cat_name(get_query_var('cat'));
+$context['category']['description'] = category_description(get_query_var('cat')); 
 
 global $paged;
 
