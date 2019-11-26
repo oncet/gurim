@@ -12,9 +12,19 @@ Text Domain: gurim
     color: #005f6b !important;
 }
 
-.navbar-light a,
-.pagination a {
+.nav-item a,
+.page-item a {
     color: black !important;
+}
+
+.sub-menu {
+    display: none;
+    list-style-type: none;
+}
+
+.menu-item-has-children.menu-item-has-children.current-menu-parent .sub-menu,
+.current-menu-item .sub-menu {
+    display: block;
 }
 
 .pagination .disabled a {

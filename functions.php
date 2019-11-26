@@ -39,3 +39,18 @@ function add_custom_post_types() {
     }
     return;
 }
+
+add_filter('nav_menu_css_class', 'gurim_menu_classes', 1, 3);
+function gurim_menu_classes( $classes, $item, $args ) {
+    if ($args->menu == 'secondary-menu') {
+        $classes[] = 'nav-item';
+    }
+    return $classes;
+}
+
+add_filter( 'nav_menu_link_attributes', function($atts, $item, $args) {
+    if ($args->menu == 'secondary-menu') {
+        $atts['class'] = "nav-link";
+    }
+    return $atts;
+}, 10, 4 );

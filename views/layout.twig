@@ -24,10 +24,7 @@
             <div class="row">
                 <div class="col-md-3">
                     {% block menu %}
-                        {% include 'partials/secondary-menu.twig' with {
-                            name: 'secondary-menu',
-                            menu: secondary_menu
-                        } %}
+                        {{ secondary_menu }}
                     {% endblock %}
                 </div>
                     <div class="col-md-9">
