@@ -23,8 +23,11 @@ Text Domain: gurim
     padding-left: 0.5em;
 }
 
-.nav-link:hover,
 .current-menu-item > .nav-link {
+    font-weight: 500;
+}
+
+#menu-secondary-menu .nav-link:hover {
     border-right: 1px solid #dee2e6;
 }
 
@@ -39,10 +42,6 @@ Text Domain: gurim
 
 nav .navbar-brand img {
     max-width: 90px;
-}
-
-.navbar-nav .active {
-    font-weight: 500;
 }
 
 .products img,
