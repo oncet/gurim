@@ -20,6 +20,12 @@ Text Domain: gurim
 .sub-menu {
     display: none;
     list-style-type: none;
+    padding-left: 0.5em;
+}
+
+.nav-link:hover,
+.current-menu-item > .nav-link {
+    border-right: 1px solid #dee2e6;
 }
 
 .menu-item-has-children.menu-item-has-children.current-menu-parent .sub-menu,
