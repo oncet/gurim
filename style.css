@@ -70,6 +70,10 @@ nav .navbar-brand img {
     list-style-type: square;
 }
 
+figcaption {
+    text-align: center;
+}
+
 .ie-fix {
     min-height: 1px;
 }
