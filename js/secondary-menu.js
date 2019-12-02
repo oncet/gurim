@@ -23,7 +23,7 @@ jQuery(function() {
   });
   jQuery('.nav').mouseleave(function(event) {
     clearTimeout(enteringTimeout);
-    var subMenu = jQuery(this).find('.sub-menu');
+    var subMenu = jQuery(this).find(':not(.current-menu-item):not(.current-menu-parent) > .sub-menu');
     var parent = jQuery(subMenu.parents('.nav-item').get(0));
     if (parent.is('.current-menu-item, .current-menu-ancestor')) return;
     exitingTimeout = setTimeout(function() {
