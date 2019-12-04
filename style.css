@@ -74,6 +74,11 @@ figcaption {
     text-align: center;
 }
 
+.wpcf7-mail-sent-ok,
+.wpcf7-mail-sent-ng {
+    border: none !important;
+}
+
 .ie-fix {
     min-height: 1px;
 }
