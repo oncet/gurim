@@ -5,6 +5,9 @@
         {% include 'partials/h1.twig' with {
             title: post.title
         } %}
+        {% if post.Price %}
+            <p class="ml-2 mb-1"><small class="text-muted">{{ post.Price }} ARS</small></p>
+        {% endif %}
         {% if post.categories %}
             <ul class="list-inline">
                 {% for category in post.categories %}

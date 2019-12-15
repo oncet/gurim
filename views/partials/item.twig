@@ -5,8 +5,13 @@
             alt="{{ post.title }}"
             class="card-img-top rounded-0 ie-fix"
         >
-        <div class="card-body p-2">
-            <p class="m-0">{{ post.title }}</p>
+        <div class="card-body pt-2 pl-0 pb-2 pr-0">
+            <div class="row">
+                <div class="{% if post.Price %} col-8 col-md-7 col-lg-8 {% else %} col {% endif %}">{{ post.title }}</div>
+                {% if post.Price %}
+                    <div class="col-4 col-md-5 col-lg-4 text-right"><small class="text-muted">{{ post.Price }} ARS</small></div>
+                {% endif %}
+            </div>
         </div>
     </div>
 </a>
