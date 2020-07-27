@@ -2,9 +2,11 @@
 
 {% block content %}
     <div class="content">
-        {% include 'partials/h1.twig' with {
-            title: post.title
-        } %}
+        {% if post.title %}
+            {% include 'partials/h1.twig' with {
+                title: post.title
+            } %}
+        {% endif %}
         {{ post.content }}
     </div>
 {% endblock %}
