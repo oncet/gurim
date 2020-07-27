@@ -20,19 +20,9 @@ function gurim_context($context) {
     $menus = get_nav_menu_locations();
     
     $primary_menu = wp_get_nav_menu_object($menus['primary-menu']);
-    $secondary_menu = wp_get_nav_menu_object($menus['secondary-menu']);
     $footer_menu = wp_get_nav_menu_object($menus['footer-menu']);
 
-    $secondary_menu_html = wp_nav_menu([
-        'menu' => $secondary_menu->slug,
-        'menu_class' => 'nav flex-column p-0 mt-md-3 d-none d-md-block',
-        'walker' => new My_Walker_Nav_Menu(),
-        'container' => false,
-        'echo' => false
-    ]);
-
     $context['primary_menu'] = $primary_menu ? new \Timber\Menu($primary_menu->term_id) : false;
-    $context['secondary_menu'] = $secondary_menu ? $secondary_menu_html : false;
     $context['footer_menu'] = $footer_menu ? new \Timber\Menu($footer_menu->term_id) : false;
 
     return $context;

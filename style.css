@@ -17,23 +17,8 @@ Text Domain: gurim
     color: black !important;
 }
 
-.sub-menu {
-    display: none;
-    list-style-type: none;
-    padding-left: 0.5em;
-}
-
 .current-menu-item > .nav-link {
     font-weight: 500;
-}
-
-#menu-secondary-menu .nav-link:hover {
-    border-right: 1px solid #dee2e6;
-}
-
-.menu-item-has-children.menu-item-has-children.current-menu-parent .sub-menu,
-.current-menu-item .sub-menu {
-    display: block;
 }
 
 .pagination .disabled a {
