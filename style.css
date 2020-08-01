@@ -8,6 +8,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gurim
 */
 
+.dropdown-menu.custom-background {
+    background: black !important;
+}
+
+.dropdown-menu.custom-background a {
+    color: white !important;
+}
+
+.dropdown-menu.custom-background a:hover {
+    background: black !important;
+    color: white !important;
+}
+
 .content a {
     color: #005f6b !important;
 }
@@ -17,7 +30,8 @@ Text Domain: gurim
     color: black !important;
 }
 
-.current-menu-item > .nav-link {
+.current-menu-item > .nav-link,
+.current-menu-ancestor > .nav-link {
     font-weight: 500;
 }
 

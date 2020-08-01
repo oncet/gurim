@@ -8,6 +8,9 @@ function gurim_menus() {
        'primary-menu' => __('Primary menu')
     ]);
     register_nav_menus([
+       'secondary-menu' => __('Secondary menu')
+    ]);
+    register_nav_menus([
        'footer-menu' => __('Footer menu')
     ]);
 }

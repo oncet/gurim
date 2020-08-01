@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light pt-0">
+<nav class="navbar navbar-expand-lg navbar-light pt-0">
     <a class="navbar-brand pt-0" href="{{ site.url }}">
         {% if blog_logo %}
             <img src="{{ blog_logo }}" alt="{{ blog_name }}" />
@@ -10,17 +10,22 @@
         class="navbar-toggler border-0"
         type="button"
         data-toggle="collapse"
-        data-target="#{{ name }}"
-        aria-controls="{{ name }}"
+        data-target="#primary-menu"
+        aria-controls="primary-menu"
         aria-expanded="false"
         aria-label="Toggle navigation"
     >
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="{{ name }}">
-        {% include 'partials/primary-menu-list.twig' with {
-            items: menu.items
+    <div class="collapse navbar-collapse" id="primary-menu">
+        {% include 'partials/navbar-list.twig' with {
+            items: primary_menu.items,
+            class: 'mr-auto'
+        } %}
+        {% include 'partials/navbar-list.twig' with {
+            items: secondary_menu.items,
+            class: 'ml-auto'
         } %}
     </div>
 </nav>

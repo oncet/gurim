@@ -1,0 +1,34 @@
+<ul class="navbar-nav {{ class }}">
+    {% for item in items %}
+        <li
+            class="
+                nav-item
+                text-right
+                ml-auto
+                {{ item.classes|join(' ') }}
+                {{ item.current ? 'active' : '' }}
+                {{ item.children ? 'dropdown' : '' }}
+            "
+        >
+            <a
+                class="nav-link"
+                data-toggle="{{ item.children ? 'dropdown' : '' }}"
+                href="{{ item.link }}"
+            >
+                {{ item.title }}
+            </a>
+            {% if item.children %}
+                <div class="dropdown-menu border-0 rounded-0 custom-background">
+                    {% for child in item.children %}
+                        <a
+                            class="dropdown-item text-right text-lg-left"
+                            href="{{ child.link }}"
+                        >
+                            {{ child.title }}
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
