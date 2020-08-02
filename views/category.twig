@@ -6,7 +6,7 @@
             title: category.name
         } %}
         {{ category.description }}
-        <div class="row">
+        <div class="row mt-4">
             {% for product in products %}
                 {% include 'partials/item.twig' with {
                     post: product
