@@ -5,15 +5,15 @@
         {% include 'partials/h1.twig' with {
             title: post.title
         } %}
-        {% if post.Price %}
-            <p class="ml-2 mb-1"><small class="text-muted">{{ post.Price }} ARS</small></p>
-        {% endif %}
         {% if post.categories %}
-            <ul class="list-inline">
+            <ul class="list-inline mb-0">
                 {% for category in post.categories %}
                     <li class="list-inline-item"><a href="{{ category.link }}" class="badge badge-pill text-secondary font-weight-normal">{{ category.name }}</a></li>
                 {% endfor %}
             </ul>
+        {% endif %}
+        {% if post.Price %}
+            <p class="text-right mb-1"><small class="text-muted">{{ post.Price }} ARS</small></p>
         {% endif %}
         <div class="content">
             {{ post.content }}
