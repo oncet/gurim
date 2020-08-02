@@ -6,7 +6,7 @@
             title: post.title
         } %}
         {% if post.categories %}
-            <ul class="list-inline mb-0">
+            <ul class="list-inline">
                 {% for category in post.categories %}
                     <li class="list-inline-item"><a href="{{ category.link }}" class="badge badge-pill text-secondary font-weight-normal">{{ category.name }}</a></li>
                 {% endfor %}
