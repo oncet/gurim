@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light pt-0">
+<nav class="navbar navbar-expand-lg navbar-light pt-0 px-0">
     <a class="navbar-brand pt-0" href="{{ site.url }}">
         {% if blog_logo %}
             <img src="{{ blog_logo }}" alt="{{ blog_name }}" />
@@ -21,11 +21,10 @@
     <div class="collapse navbar-collapse" id="primary-menu">
         {% include 'partials/navbar-list.twig' with {
             items: primary_menu.items,
-            class: 'mr-auto'
+            class: 'ml-auto mr-lg-5'
         } %}
         {% include 'partials/navbar-list.twig' with {
-            items: secondary_menu.items,
-            class: 'ml-auto'
+            items: secondary_menu.items
         } %}
     </div>
 </nav>
