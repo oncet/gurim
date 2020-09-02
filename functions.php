@@ -6,6 +6,7 @@ require_once( __DIR__ . '/includes/custom-post-types.php');
 require_once( __DIR__ . '/includes/menus.php');
 require_once( __DIR__ . '/includes/context.php');
 require_once( __DIR__ . '/includes/enqueue-scripts.php');
+require_once( __DIR__ . '/includes/shortcodes.php');
 
 add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
 function add_current_nav_class($classes, $item) {
