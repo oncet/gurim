@@ -1,8 +1,18 @@
-<p>Hello world!</p>
-{{ menu.items[0].name }}
-{{ menu.items[0].url }}
-{{ menu.items[0].description }}
-
-{{ menu.items[1].name }}
-{{ menu.items[1].url }}
-{{ menu.items[1].description }}
+<div class="row">
+  {% for item in menu.items %}
+    <a href="{{ item.url }}" class="col-md-4 mb-4">
+      <div class="card bg-transparent rounded-0 border-0">
+          <img
+              src="{{ function('str_replace', '×', 'x', item.description) }}"
+              alt="{{ item.name }}"
+              class="card-img-top rounded-0 ie-fix"
+          >
+          <div class="card-body pt-2 pl-0 pb-2 pr-0">
+              <div class="row">
+                  <div class="col">{{ item.name }}</div>
+              </div>
+          </div>
+      </div>
+    </a>
+  {% endfor %}
+</div>
