@@ -40,3 +40,5 @@ function add_custom_post_types() {
     }
     return;
 }
+
+remove_filter( 'nav_menu_description', 'wptexturize' );
