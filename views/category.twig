@@ -9,7 +9,11 @@
         <div class="row mt-4">
             {% for product in products %}
                 {% include 'partials/item.twig' with {
-                    post: product
+                    alt: product.title,
+                    image: product.thumbnail.src('thumbnail'),
+                    link: product.link,
+                    price: product.Price,
+                    title: product.title
                 } %}
             {% endfor %}
         </div>
