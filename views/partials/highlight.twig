@@ -1,18 +1,10 @@
 <div class="row">
   {% for item in menu.items %}
-    <a href="{{ item.url }}" class="col-md-4 mb-4 text-decoration-none">
-      <div class="card bg-transparent rounded-0 border-0">
-          <img
-              src="{{ item.description }}"
-              alt="{{ item.name }}"
-              class="card-img-top rounded-0 ie-fix"
-          >
-          <div class="card-body pt-2 pl-0 pb-2 pr-0">
-              <div class="row">
-                  <div class="col">{{ item.name }}</div>
-              </div>
-          </div>
-      </div>
-    </a>
+    {% include 'partials/item.twig' with {
+      alt: item.name,
+      image: item.description,
+      link: item.url,
+      title: item.name
+    } %}
   {% endfor %}
 </div>
