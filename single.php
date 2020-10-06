@@ -4,4 +4,4 @@ $context = Timber::context();
 
 $context['post'] = new Timber\Post();
 
-Timber::render(['single-product.twig'], $context);
+Timber::render(['single.twig'], $context);
