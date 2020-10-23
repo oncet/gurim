@@ -46,6 +46,7 @@ nav .navbar-brand img {
 .products img,
 .product img {
     width: 100%;
+    height: auto;
 }
 
 .product .content img {
@@ -79,6 +80,7 @@ figcaption {
 }
 
 @media only screen and (max-width: 576px) {
+    /* TODO Include non-gallery images too */
 	.blocks-gallery-item {
           width: 100% !important;
           margin-right: 0 !important;
