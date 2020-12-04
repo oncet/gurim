@@ -6,12 +6,7 @@
             class="card-img-top rounded-0 ie-fix"
         >
         <div class="card-body pt-2 pl-0 pb-2 pr-0">
-            <div class="row">
-                <div class="{% if price %} col-8 col-md-7 col-lg-8 {% else %} col {% endif %}">{{ title }}</div>
-                {% if price %}
-                    <div class="col-4 col-md-5 col-lg-4 text-right"><small class="text-muted">{{ price }} ARS</small></div>
-                {% endif %}
-            </div>
+            {{ title }}
         </div>
     </div>
 </a>
