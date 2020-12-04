@@ -3,6 +3,7 @@
 $context = Timber::context();
 
 global $paged;
+
 if (!isset($paged) || !$paged){
     $paged = 1;
 }
