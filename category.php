@@ -12,6 +12,7 @@ if (!isset($paged) || !$paged){
 }
 
 $context['products'] = new Timber\PostQuery([
+    'post_type' => ['post', 'product'],
     'posts_per_page' => get_option('posts_per_page'),
     'paged' => $paged,
     'tax_query' => [
