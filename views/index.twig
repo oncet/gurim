@@ -13,4 +13,7 @@
             {% endfor %}
         </div>
     </div>
+    {% include 'partials/pagination.twig' with {
+        paginable: products
+    } %}
 {% endblock %}
