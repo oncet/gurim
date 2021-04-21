@@ -10,7 +10,7 @@
     <body class="{{ body_class }}">
         <div class="container">
             {% include 'partials/navbar.twig' %}
-            <div class="mt-3">
+            <div class="mt-3 overflow-hidden">
                 {{ block('content') }}
             </div>
             {% include 'partials/footer.twig' %}
