@@ -9,6 +9,9 @@ if(!post_type_exists('product')) {
             'show_ui' => true,
             'public' => true,
             'has_archive' => true,
+            'show_in_graphql' => true,
+            'graphql_single_name' => 'product',
+            'graphql_plural_name' => 'products',
             'show_in_rest' => true,
             'supports' => [
                 'title',
